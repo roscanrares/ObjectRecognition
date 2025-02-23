@@ -1,12 +1,10 @@
 # YOLOv9
 
-Implementation of paper - [YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information](https://arxiv.org/abs/2402.13616)
+## Introduction
 
-[![arxiv.org](http://img.shields.io/badge/cs.CV-arXiv%3A2402.13616-B31B1B.svg)](https://arxiv.org/abs/2402.13616)
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/kadirnar/Yolov9)
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/merve/yolov9)
-[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/train-yolov9-object-detection-on-custom-dataset.ipynb)
-[![OpenCV](https://img.shields.io/badge/OpenCV-BlogPost-black?logo=opencv&labelColor=blue&color=black)](https://learnopencv.com/yolov9-advancing-the-yolo-legacy/)
+This project involves the fine-tuning of the YOLOv9 model for a specific dataset used in the Electron LSE hackathon, organized at the Polytechnic University of Bucharest. The dataset is derived from the COCO dataset and was tailored to meet the unique challenges presented during the hackathon. By leveraging the programmable gradient information capabilities of YOLOv9 [Wang et al., 2024], we aimed to enhance the model's performance on this specialized dataset. Our work also draws inspiration from YOLOR's multi-task learning approach [Chang et al., 2023], which provided additional insights into optimizing the model for diverse tasks.
+
+The primary goal was to achieve the best possible performance (lowest loss) on the custom dataset provided during the Electron LSE hackathon. After evaluating several state-of-the-art models, we selected YOLOv9 due to its advanced programmable gradient information capabilities, which we considered the most suitable for our use case [Wang et al., 2024]. I fine-tuned the YOLOv9 model specifically for the custom dataset derived from COCO, optimizing it to achieve the highest possible score. This involved adjusting hyperparameters, augmenting the dataset, and iteratively training the model to minimize loss and maximize detection accuracy.
 
 <div align="center">
     <a href="./">
@@ -196,26 +194,6 @@ python detect.py --source './data/images/horses.jpg' --img 640 --device 0 --weig
 ```
 
 
-## Citation
-
-```
-@article{wang2024yolov9,
-  title={{YOLOv9}: Learning What You Want to Learn Using Programmable Gradient Information},
-  author={Wang, Chien-Yao  and Liao, Hong-Yuan Mark},
-  booktitle={arXiv preprint arXiv:2402.13616},
-  year={2024}
-}
-```
-
-```
-@article{chang2023yolor,
-  title={{YOLOR}-Based Multi-Task Learning},
-  author={Chang, Hung-Shuo and Wang, Chien-Yao and Wang, Richard Robert and Chou, Gene and Liao, Hong-Yuan Mark},
-  journal={arXiv preprint arXiv:2309.16921},
-  year={2023}
-}
-```
-
 
 ## Teaser
 
@@ -266,17 +244,11 @@ python caption/train.py --workers 8 --device 0 --batch 32  --data coco.yaml --im
 ```
 
 
-## Acknowledgements
+## References
 
-<details><summary> <b>Expand</b> </summary>
+Wang, C.-Y., & Liao, H.-Y. M. (2024). YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information. arXiv preprint arXiv:2402.13616.
 
-* [https://github.com/AlexeyAB/darknet](https://github.com/AlexeyAB/darknet)
-* [https://github.com/WongKinYiu/yolor](https://github.com/WongKinYiu/yolor)
-* [https://github.com/WongKinYiu/yolov7](https://github.com/WongKinYiu/yolov7)
-* [https://github.com/VDIGPKU/DynamicDet](https://github.com/VDIGPKU/DynamicDet)
-* [https://github.com/DingXiaoH/RepVGG](https://github.com/DingXiaoH/RepVGG)
-* [https://github.com/ultralytics/yolov5](https://github.com/ultralytics/yolov5)
-* [https://github.com/meituan/YOLOv6](https://github.com/meituan/YOLOv6)
+Chang, H.-S., Wang, C.-Y., Wang, R. R., Chou, G., & Liao, H.-Y. M. (2023). YOLOR-Based Multi-Task Learning. arXiv preprint arXiv:2309.16921.
 
 </details>
-# ObjectRecognition
+
